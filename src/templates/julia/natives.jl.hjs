@@ -1,0 +1,28 @@
+# Auto-generated
+{{#each juliaStructs}}
+
+struct {{this.name}}
+{{#each this.variables}}
+    {{this.name}}::{{this.type}}
+{{/each}}{{~#if this.ctor}}
+    {{{this.ctor}}}
+{{/if}}
+end
+{{/each}}
+
+{{~#each juliaMetadata.natives}}
+
+function {{this.name}}({{#joinDefined this.variables ", "}}{{#if this.argType}}{{name}}::{{{argType}}}{{/if}}{{/joinDefined}})::{{this.return.type}}
+{{~#each this.variables}}{{#if this.init}}
+    {{{this.init}}}
+{{~/if}}{{/each}}
+    {{../constants.returnTempVar}} = ccall((:sampgdk_{{this.name}}, "{{../constants.libPath}}"), {{this.return.ctype}}, (
+        {{~#joinDefined this.variables ", "}}{{this.ctype}}{{/joinDefined}}{{#if (eq this.variables.length 1)}},{{/if~}})
+        {{~#each (filterNonEmpty this.variables "ccall")}}, {{this.ccall}}{{/each~}}
+    )
+{{~#each this.variables}}{{#if this.cleanup}}
+    {{{this.cleanup}}}
+{{~/if}}{{/each}}
+    return {{this.return.value}}
+end
+{{/each}}

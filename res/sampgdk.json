@@ -1,0 +1,6836 @@
+{
+  "natives": [
+    {
+      "name": "CreateActor",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "rotation",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "DestroyActor",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsActorStreamedIn",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        },
+        {
+          "name": "forplayerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetActorVirtualWorld",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        },
+        {
+          "name": "vworld",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetActorVirtualWorld",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "ApplyActorAnimation",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        },
+        {
+          "name": "animlib",
+          "type": "const char *"
+        },
+        {
+          "name": "animname",
+          "type": "const char *"
+        },
+        {
+          "name": "fDelta",
+          "type": "float"
+        },
+        {
+          "name": "loop",
+          "type": "bool"
+        },
+        {
+          "name": "lockx",
+          "type": "bool"
+        },
+        {
+          "name": "locky",
+          "type": "bool"
+        },
+        {
+          "name": "freeze",
+          "type": "bool"
+        },
+        {
+          "name": "time",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "ClearActorAnimations",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetActorPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetActorPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float *"
+        },
+        {
+          "name": "y",
+          "type": "float *"
+        },
+        {
+          "name": "z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetActorFacingAngle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        },
+        {
+          "name": "angle",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetActorFacingAngle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        },
+        {
+          "name": "angle",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetActorHealth",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        },
+        {
+          "name": "health",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetActorHealth",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        },
+        {
+          "name": "health",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetActorInvulnerable",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        },
+        {
+          "name": "invulnerable",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "IsActorInvulnerable",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsValidActor",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "actorid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsValidVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleDistanceFromPoint",
+      "returnType": "float",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "CreateVehicle",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "vehicletype",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "rotation",
+          "type": "float"
+        },
+        {
+          "name": "color1",
+          "type": "int"
+        },
+        {
+          "name": "color2",
+          "type": "int"
+        },
+        {
+          "name": "respawn_delay",
+          "type": "int"
+        },
+        {
+          "name": "addsiren",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "DestroyVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsVehicleStreamedIn",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "forplayerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehiclePos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float *"
+        },
+        {
+          "name": "y",
+          "type": "float *"
+        },
+        {
+          "name": "z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetVehiclePos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleZAngle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "z_angle",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleRotationQuat",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "w",
+          "type": "float *"
+        },
+        {
+          "name": "x",
+          "type": "float *"
+        },
+        {
+          "name": "y",
+          "type": "float *"
+        },
+        {
+          "name": "z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetVehicleZAngle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "z_angle",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "SetVehicleParamsForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objective",
+          "type": "int"
+        },
+        {
+          "name": "doorslocked",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "ManualVehicleEngineAndLights",
+      "returnType": "bool",
+      "args": []
+    },
+    {
+      "name": "SetVehicleParamsEx",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "engine",
+          "type": "int"
+        },
+        {
+          "name": "lights",
+          "type": "int"
+        },
+        {
+          "name": "alarm",
+          "type": "int"
+        },
+        {
+          "name": "doors",
+          "type": "int"
+        },
+        {
+          "name": "bonnet",
+          "type": "int"
+        },
+        {
+          "name": "boot",
+          "type": "int"
+        },
+        {
+          "name": "objective",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleParamsEx",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "engine",
+          "type": "int *"
+        },
+        {
+          "name": "lights",
+          "type": "int *"
+        },
+        {
+          "name": "alarm",
+          "type": "int *"
+        },
+        {
+          "name": "doors",
+          "type": "int *"
+        },
+        {
+          "name": "bonnet",
+          "type": "int *"
+        },
+        {
+          "name": "boot",
+          "type": "int *"
+        },
+        {
+          "name": "objective",
+          "type": "int *"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleParamsSirenState",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetVehicleParamsCarDoors",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "driver",
+          "type": "int"
+        },
+        {
+          "name": "passenger",
+          "type": "int"
+        },
+        {
+          "name": "backleft",
+          "type": "int"
+        },
+        {
+          "name": "backright",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleParamsCarDoors",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "driver",
+          "type": "int *"
+        },
+        {
+          "name": "passenger",
+          "type": "int *"
+        },
+        {
+          "name": "backleft",
+          "type": "int *"
+        },
+        {
+          "name": "backright",
+          "type": "int *"
+        }
+      ]
+    },
+    {
+      "name": "SetVehicleParamsCarWindows",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "driver",
+          "type": "int"
+        },
+        {
+          "name": "passenger",
+          "type": "int"
+        },
+        {
+          "name": "backleft",
+          "type": "int"
+        },
+        {
+          "name": "backright",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleParamsCarWindows",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "driver",
+          "type": "int *"
+        },
+        {
+          "name": "passenger",
+          "type": "int *"
+        },
+        {
+          "name": "backleft",
+          "type": "int *"
+        },
+        {
+          "name": "backright",
+          "type": "int *"
+        }
+      ]
+    },
+    {
+      "name": "SetVehicleToRespawn",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "LinkVehicleToInterior",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "interiorid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "AddVehicleComponent",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "componentid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "RemoveVehicleComponent",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "componentid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "ChangeVehicleColor",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "color1",
+          "type": "int"
+        },
+        {
+          "name": "color2",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "ChangeVehiclePaintjob",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "paintjobid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetVehicleHealth",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "health",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleHealth",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "health",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "AttachTrailerToVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "trailerid",
+          "type": "int"
+        },
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "DetachTrailerFromVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsTrailerAttachedToVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleTrailer",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetVehicleNumberPlate",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "numberplate",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleModel",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleComponentInSlot",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "slot",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleComponentType",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "component",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "RepairVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleVelocity",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "X",
+          "type": "float *"
+        },
+        {
+          "name": "Y",
+          "type": "float *"
+        },
+        {
+          "name": "Z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetVehicleVelocity",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "X",
+          "type": "float"
+        },
+        {
+          "name": "Y",
+          "type": "float"
+        },
+        {
+          "name": "Z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "SetVehicleAngularVelocity",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "X",
+          "type": "float"
+        },
+        {
+          "name": "Y",
+          "type": "float"
+        },
+        {
+          "name": "Z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleDamageStatus",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "panels",
+          "type": "int *"
+        },
+        {
+          "name": "doors",
+          "type": "int *"
+        },
+        {
+          "name": "lights",
+          "type": "int *"
+        },
+        {
+          "name": "tires",
+          "type": "int *"
+        }
+      ]
+    },
+    {
+      "name": "UpdateVehicleDamageStatus",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "panels",
+          "type": "int"
+        },
+        {
+          "name": "doors",
+          "type": "int"
+        },
+        {
+          "name": "lights",
+          "type": "int"
+        },
+        {
+          "name": "tires",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetVehicleVirtualWorld",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "worldid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleVirtualWorld",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetVehicleModelInfo",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "model",
+          "type": "int"
+        },
+        {
+          "name": "infotype",
+          "type": "int"
+        },
+        {
+          "name": "X",
+          "type": "float *"
+        },
+        {
+          "name": "Y",
+          "type": "float *"
+        },
+        {
+          "name": "Z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SendClientMessage",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SendClientMessageToAll",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "color",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SendPlayerMessageToPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "senderid",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SendPlayerMessageToAll",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "senderid",
+          "type": "int"
+        },
+        {
+          "name": "message",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SendDeathMessage",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "killer",
+          "type": "int"
+        },
+        {
+          "name": "killee",
+          "type": "int"
+        },
+        {
+          "name": "weapon",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SendDeathMessageToPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "killer",
+          "type": "int"
+        },
+        {
+          "name": "killee",
+          "type": "int"
+        },
+        {
+          "name": "weapon",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GameTextForAll",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "const char *"
+        },
+        {
+          "name": "time",
+          "type": "int"
+        },
+        {
+          "name": "style",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GameTextForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "const char *"
+        },
+        {
+          "name": "time",
+          "type": "int"
+        },
+        {
+          "name": "style",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetTickCount",
+      "returnType": "int",
+      "args": []
+    },
+    {
+      "name": "GetMaxPlayers",
+      "returnType": "int",
+      "args": []
+    },
+    {
+      "name": "VectorSize",
+      "returnType": "float",
+      "args": [
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerPoolSize",
+      "returnType": "int",
+      "args": []
+    },
+    {
+      "name": "GetVehiclePoolSize",
+      "returnType": "int",
+      "args": []
+    },
+    {
+      "name": "GetActorPoolSize",
+      "returnType": "int",
+      "args": []
+    },
+    {
+      "name": "SHA256_PassHash",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "password",
+          "type": "const char *"
+        },
+        {
+          "name": "salt",
+          "type": "const char *"
+        },
+        {
+          "name": "ret_hash",
+          "type": "char *"
+        },
+        {
+          "name": "ret_hash_len",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetSVarInt",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        },
+        {
+          "name": "int_value",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetSVarInt",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SetSVarString",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        },
+        {
+          "name": "string_value",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetSVarString",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        },
+        {
+          "name": "string_return",
+          "type": "char *"
+        },
+        {
+          "name": "len",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetSVarFloat",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        },
+        {
+          "name": "float_value",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetSVarFloat",
+      "returnType": "float",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "DeleteSVar",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetSVarsUpperIndex",
+      "returnType": "int",
+      "args": []
+    },
+    {
+      "name": "GetSVarNameAtIndex",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "ret_varname",
+          "type": "char *"
+        },
+        {
+          "name": "ret_len",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetSVarType",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SetGameModeText",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SetTeamCount",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "count",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "AddPlayerClass",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "spawn_x",
+          "type": "float"
+        },
+        {
+          "name": "spawn_y",
+          "type": "float"
+        },
+        {
+          "name": "spawn_z",
+          "type": "float"
+        },
+        {
+          "name": "z_angle",
+          "type": "float"
+        },
+        {
+          "name": "weapon1",
+          "type": "int"
+        },
+        {
+          "name": "weapon1_ammo",
+          "type": "int"
+        },
+        {
+          "name": "weapon2",
+          "type": "int"
+        },
+        {
+          "name": "weapon2_ammo",
+          "type": "int"
+        },
+        {
+          "name": "weapon3",
+          "type": "int"
+        },
+        {
+          "name": "weapon3_ammo",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "AddPlayerClassEx",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "teamid",
+          "type": "int"
+        },
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "spawn_x",
+          "type": "float"
+        },
+        {
+          "name": "spawn_y",
+          "type": "float"
+        },
+        {
+          "name": "spawn_z",
+          "type": "float"
+        },
+        {
+          "name": "z_angle",
+          "type": "float"
+        },
+        {
+          "name": "weapon1",
+          "type": "int"
+        },
+        {
+          "name": "weapon1_ammo",
+          "type": "int"
+        },
+        {
+          "name": "weapon2",
+          "type": "int"
+        },
+        {
+          "name": "weapon2_ammo",
+          "type": "int"
+        },
+        {
+          "name": "weapon3",
+          "type": "int"
+        },
+        {
+          "name": "weapon3_ammo",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "AddStaticVehicle",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "spawn_x",
+          "type": "float"
+        },
+        {
+          "name": "spawn_y",
+          "type": "float"
+        },
+        {
+          "name": "spawn_z",
+          "type": "float"
+        },
+        {
+          "name": "z_angle",
+          "type": "float"
+        },
+        {
+          "name": "color1",
+          "type": "int"
+        },
+        {
+          "name": "color2",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "AddStaticVehicleEx",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "spawn_x",
+          "type": "float"
+        },
+        {
+          "name": "spawn_y",
+          "type": "float"
+        },
+        {
+          "name": "spawn_z",
+          "type": "float"
+        },
+        {
+          "name": "z_angle",
+          "type": "float"
+        },
+        {
+          "name": "color1",
+          "type": "int"
+        },
+        {
+          "name": "color2",
+          "type": "int"
+        },
+        {
+          "name": "respawn_delay",
+          "type": "int"
+        },
+        {
+          "name": "addsiren",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "AddStaticPickup",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "model",
+          "type": "int"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "virtualworld",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "CreatePickup",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "model",
+          "type": "int"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "virtualworld",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "DestroyPickup",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "pickup",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "ShowNameTags",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "show",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "ShowPlayerMarkers",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "mode",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GameModeExit",
+      "returnType": "bool",
+      "args": []
+    },
+    {
+      "name": "SetWorldTime",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "hour",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetWeaponName",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "weaponid",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "type": "char *"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "EnableTirePopping",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "enable",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "EnableVehicleFriendlyFire",
+      "returnType": "bool",
+      "args": []
+    },
+    {
+      "name": "AllowInteriorWeapons",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "allow",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "SetWeather",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "weatherid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetGravity",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "gravity",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetGravity",
+      "returnType": "float",
+      "args": []
+    },
+    {
+      "name": "AllowAdminTeleport",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "allow",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "SetDeathDropAmount",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "amount",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "CreateExplosion",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "radius",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "EnableZoneNames",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "enable",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "UsePlayerPedAnims",
+      "returnType": "bool",
+      "args": []
+    },
+    {
+      "name": "DisableInteriorEnterExits",
+      "returnType": "bool",
+      "args": []
+    },
+    {
+      "name": "SetNameTagDrawDistance",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "distance",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "DisableNameTagLOS",
+      "returnType": "bool",
+      "args": []
+    },
+    {
+      "name": "LimitGlobalChatRadius",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "chat_radius",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "LimitPlayerMarkerRadius",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "marker_radius",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "ConnectNPC",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "name",
+          "type": "const char *"
+        },
+        {
+          "name": "script",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerNPC",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerAdmin",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "Kick",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "Ban",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "BanEx",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "reason",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SendRconCommand",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "command",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerNetworkStats",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "retstr",
+          "type": "char *"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetNetworkStats",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "retstr",
+          "type": "char *"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerVersion",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "version",
+          "type": "char *"
+        },
+        {
+          "name": "len",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "BlockIpAddress",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "ip_address",
+          "type": "const char *"
+        },
+        {
+          "name": "timems",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "UnBlockIpAddress",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "ip_address",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetServerVarAsString",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        },
+        {
+          "name": "value",
+          "type": "char *"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetServerVarAsInt",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetServerVarAsBool",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetConsoleVarAsString",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        },
+        {
+          "name": "buffer",
+          "type": "char *"
+        },
+        {
+          "name": "len",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetConsoleVarAsInt",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetConsoleVarAsBool",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetServerTickRate",
+      "returnType": "int",
+      "args": []
+    },
+    {
+      "name": "NetStats_GetConnectedTime",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "NetStats_MessagesReceived",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "NetStats_BytesReceived",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "NetStats_MessagesSent",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "NetStats_BytesSent",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "NetStats_MessagesRecvPerSecond",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "NetStats_PacketLossPercent",
+      "returnType": "float",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "NetStats_ConnectionStatus",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "NetStats_GetIpPort",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "ip_port",
+          "type": "char *"
+        },
+        {
+          "name": "ip_port_len",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "CreateMenu",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "title",
+          "type": "const char *"
+        },
+        {
+          "name": "columns",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "col1width",
+          "type": "float"
+        },
+        {
+          "name": "col2width",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "DestroyMenu",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "menuid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "AddMenuItem",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "menuid",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "menutext",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SetMenuColumnHeader",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "menuid",
+          "type": "int"
+        },
+        {
+          "name": "column",
+          "type": "int"
+        },
+        {
+          "name": "columnheader",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "ShowMenuForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "menuid",
+          "type": "int"
+        },
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "HideMenuForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "menuid",
+          "type": "int"
+        },
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsValidMenu",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "menuid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "DisableMenu",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "menuid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "DisableMenuRow",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "menuid",
+          "type": "int"
+        },
+        {
+          "name": "row",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerMenu",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawCreate",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "text",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawDestroy",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawLetterSize",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawTextSize",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawAlignment",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "alignment",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawColor",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawUseBox",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "use",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawBoxColor",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawSetShadow",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawSetOutline",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawBackgroundColor",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawFont",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "font",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawSetProportional",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "set",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawSetSelectable",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "set",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawShowForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawHideForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawShowForAll",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawHideForAll",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawSetString",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "string",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawSetPreviewModel",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "modelindex",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawSetPreviewRot",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "fRotX",
+          "type": "float"
+        },
+        {
+          "name": "fRotY",
+          "type": "float"
+        },
+        {
+          "name": "fRotZ",
+          "type": "float"
+        },
+        {
+          "name": "fZoom",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "TextDrawSetPreviewVehCol",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "color1",
+          "type": "int"
+        },
+        {
+          "name": "color2",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SelectTextDraw",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "hovercolor",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "CancelSelectTextDraw",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GangZoneCreate",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "minx",
+          "type": "float"
+        },
+        {
+          "name": "miny",
+          "type": "float"
+        },
+        {
+          "name": "maxx",
+          "type": "float"
+        },
+        {
+          "name": "maxy",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GangZoneDestroy",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "zone",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GangZoneShowForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "zone",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GangZoneShowForAll",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "zone",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GangZoneHideForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "zone",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GangZoneHideForAll",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "zone",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GangZoneFlashForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "zone",
+          "type": "int"
+        },
+        {
+          "name": "flashcolor",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GangZoneFlashForAll",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "zone",
+          "type": "int"
+        },
+        {
+          "name": "flashcolor",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GangZoneStopFlashForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "zone",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GangZoneStopFlashForAll",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "zone",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "Create3DTextLabel",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "text",
+          "type": "const char *"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "DrawDistance",
+          "type": "float"
+        },
+        {
+          "name": "virtualworld",
+          "type": "int"
+        },
+        {
+          "name": "testLOS",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "Delete3DTextLabel",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "Attach3DTextLabelToPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "OffsetX",
+          "type": "float"
+        },
+        {
+          "name": "OffsetY",
+          "type": "float"
+        },
+        {
+          "name": "OffsetZ",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "Attach3DTextLabelToVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "OffsetX",
+          "type": "float"
+        },
+        {
+          "name": "OffsetY",
+          "type": "float"
+        },
+        {
+          "name": "OffsetZ",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "Update3DTextLabelText",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "CreatePlayer3DTextLabel",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "const char *"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "DrawDistance",
+          "type": "float"
+        },
+        {
+          "name": "attachedplayer",
+          "type": "int"
+        },
+        {
+          "name": "attachedvehicle",
+          "type": "int"
+        },
+        {
+          "name": "testLOS",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "DeletePlayer3DTextLabel",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "UpdatePlayer3DTextLabelText",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "id",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "ShowPlayerDialog",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "dialogid",
+          "type": "int"
+        },
+        {
+          "name": "style",
+          "type": "int"
+        },
+        {
+          "name": "caption",
+          "type": "const char *"
+        },
+        {
+          "name": "info",
+          "type": "const char *"
+        },
+        {
+          "name": "button1",
+          "type": "const char *"
+        },
+        {
+          "name": "button2",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SetTimer",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "interval",
+          "type": "int"
+        },
+        {
+          "name": "repeat",
+          "type": "bool"
+        },
+        {
+          "name": "callback",
+          "type": "TimerCallback"
+        },
+        {
+          "name": "param",
+          "type": "void *"
+        }
+      ]
+    },
+    {
+      "name": "KillTimer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "timerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "gpci",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "buffer",
+          "type": "char *"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "AddCharModel",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "baseid",
+          "type": "int"
+        },
+        {
+          "name": "newid",
+          "type": "int"
+        },
+        {
+          "name": "dffname",
+          "type": "const char *"
+        },
+        {
+          "name": "txdname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "AddSimpleModel",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "virtualworld",
+          "type": "int"
+        },
+        {
+          "name": "baseid",
+          "type": "int"
+        },
+        {
+          "name": "newid",
+          "type": "int"
+        },
+        {
+          "name": "dffname",
+          "type": "const char *"
+        },
+        {
+          "name": "txdname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "AddSimpleModelTimed",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "virtualworld",
+          "type": "int"
+        },
+        {
+          "name": "baseid",
+          "type": "int"
+        },
+        {
+          "name": "newid",
+          "type": "int"
+        },
+        {
+          "name": "dffname",
+          "type": "const char *"
+        },
+        {
+          "name": "txdname",
+          "type": "const char *"
+        },
+        {
+          "name": "timeon",
+          "type": "int"
+        },
+        {
+          "name": "timeoff",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "FindModelFileNameFromCRC",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "crc",
+          "type": "int"
+        },
+        {
+          "name": "model_str",
+          "type": "char *"
+        },
+        {
+          "name": "model_str_len",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "FindTextureFileNameFromCRC",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "crc",
+          "type": "int"
+        },
+        {
+          "name": "texture_str",
+          "type": "char *"
+        },
+        {
+          "name": "texture_str_len",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "RedirectDownload",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "url",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "HTTP",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "url",
+          "type": "const char *"
+        },
+        {
+          "name": "data",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "CreateObject",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "rX",
+          "type": "float"
+        },
+        {
+          "name": "rY",
+          "type": "float"
+        },
+        {
+          "name": "rZ",
+          "type": "float"
+        },
+        {
+          "name": "DrawDistance",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "AttachObjectToVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "fOffsetX",
+          "type": "float"
+        },
+        {
+          "name": "fOffsetY",
+          "type": "float"
+        },
+        {
+          "name": "fOffsetZ",
+          "type": "float"
+        },
+        {
+          "name": "fRotX",
+          "type": "float"
+        },
+        {
+          "name": "fRotY",
+          "type": "float"
+        },
+        {
+          "name": "fRotZ",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "AttachObjectToObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "attachtoid",
+          "type": "int"
+        },
+        {
+          "name": "fOffsetX",
+          "type": "float"
+        },
+        {
+          "name": "fOffsetY",
+          "type": "float"
+        },
+        {
+          "name": "fOffsetZ",
+          "type": "float"
+        },
+        {
+          "name": "fRotX",
+          "type": "float"
+        },
+        {
+          "name": "fRotY",
+          "type": "float"
+        },
+        {
+          "name": "fRotZ",
+          "type": "float"
+        },
+        {
+          "name": "SyncRotation",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "AttachObjectToPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "fOffsetX",
+          "type": "float"
+        },
+        {
+          "name": "fOffsetY",
+          "type": "float"
+        },
+        {
+          "name": "fOffsetZ",
+          "type": "float"
+        },
+        {
+          "name": "fRotX",
+          "type": "float"
+        },
+        {
+          "name": "fRotY",
+          "type": "float"
+        },
+        {
+          "name": "fRotZ",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "SetObjectPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetObjectPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float *"
+        },
+        {
+          "name": "y",
+          "type": "float *"
+        },
+        {
+          "name": "z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetObjectRot",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "rotX",
+          "type": "float"
+        },
+        {
+          "name": "rotY",
+          "type": "float"
+        },
+        {
+          "name": "rotZ",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetObjectRot",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "rotX",
+          "type": "float *"
+        },
+        {
+          "name": "rotY",
+          "type": "float *"
+        },
+        {
+          "name": "rotZ",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "GetObjectModel",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetObjectNoCameraCol",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsValidObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "DestroyObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "MoveObject",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "X",
+          "type": "float"
+        },
+        {
+          "name": "Y",
+          "type": "float"
+        },
+        {
+          "name": "Z",
+          "type": "float"
+        },
+        {
+          "name": "Speed",
+          "type": "float"
+        },
+        {
+          "name": "RotX",
+          "type": "float"
+        },
+        {
+          "name": "RotY",
+          "type": "float"
+        },
+        {
+          "name": "RotZ",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "StopObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsObjectMoving",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "EditObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "EditPlayerObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SelectObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "CancelEdit",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "CreatePlayerObject",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "rX",
+          "type": "float"
+        },
+        {
+          "name": "rY",
+          "type": "float"
+        },
+        {
+          "name": "rZ",
+          "type": "float"
+        },
+        {
+          "name": "DrawDistance",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "AttachPlayerObjectToPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectplayer",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "attachplayer",
+          "type": "int"
+        },
+        {
+          "name": "OffsetX",
+          "type": "float"
+        },
+        {
+          "name": "OffsetY",
+          "type": "float"
+        },
+        {
+          "name": "OffsetZ",
+          "type": "float"
+        },
+        {
+          "name": "rX",
+          "type": "float"
+        },
+        {
+          "name": "rY",
+          "type": "float"
+        },
+        {
+          "name": "rZ",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "AttachPlayerObjectToVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "fOffsetX",
+          "type": "float"
+        },
+        {
+          "name": "fOffsetY",
+          "type": "float"
+        },
+        {
+          "name": "fOffsetZ",
+          "type": "float"
+        },
+        {
+          "name": "fRotX",
+          "type": "float"
+        },
+        {
+          "name": "fRotY",
+          "type": "float"
+        },
+        {
+          "name": "RotZ",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerObjectPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerObjectPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float *"
+        },
+        {
+          "name": "y",
+          "type": "float *"
+        },
+        {
+          "name": "z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerObjectRot",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "rotX",
+          "type": "float"
+        },
+        {
+          "name": "rotY",
+          "type": "float"
+        },
+        {
+          "name": "rotZ",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerObjectRot",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "rotX",
+          "type": "float *"
+        },
+        {
+          "name": "rotY",
+          "type": "float *"
+        },
+        {
+          "name": "rotZ",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerObjectModel",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerObjectNoCameraCol",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsValidPlayerObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "DestroyPlayerObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "MovePlayerObject",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "Speed",
+          "type": "float"
+        },
+        {
+          "name": "RotX",
+          "type": "float"
+        },
+        {
+          "name": "RotY",
+          "type": "float"
+        },
+        {
+          "name": "RotZ",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "StopPlayerObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerObjectMoving",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetObjectMaterial",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "materialindex",
+          "type": "int"
+        },
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "txdname",
+          "type": "const char *"
+        },
+        {
+          "name": "texturename",
+          "type": "const char *"
+        },
+        {
+          "name": "materialcolor",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerObjectMaterial",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "materialindex",
+          "type": "int"
+        },
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "txdname",
+          "type": "const char *"
+        },
+        {
+          "name": "texturename",
+          "type": "const char *"
+        },
+        {
+          "name": "materialcolor",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetObjectMaterialText",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "const char *"
+        },
+        {
+          "name": "materialindex",
+          "type": "int"
+        },
+        {
+          "name": "materialsize",
+          "type": "int"
+        },
+        {
+          "name": "fontface",
+          "type": "const char *"
+        },
+        {
+          "name": "fontsize",
+          "type": "int"
+        },
+        {
+          "name": "bold",
+          "type": "bool"
+        },
+        {
+          "name": "fontcolor",
+          "type": "int"
+        },
+        {
+          "name": "backcolor",
+          "type": "int"
+        },
+        {
+          "name": "textalignment",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerObjectMaterialText",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "const char *"
+        },
+        {
+          "name": "materialindex",
+          "type": "int"
+        },
+        {
+          "name": "materialsize",
+          "type": "int"
+        },
+        {
+          "name": "fontface",
+          "type": "const char *"
+        },
+        {
+          "name": "fontsize",
+          "type": "int"
+        },
+        {
+          "name": "bold",
+          "type": "bool"
+        },
+        {
+          "name": "fontcolor",
+          "type": "int"
+        },
+        {
+          "name": "backcolor",
+          "type": "int"
+        },
+        {
+          "name": "textalignment",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetObjectsDefaultCameraCol",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "disable",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "SetSpawnInfo",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "team",
+          "type": "int"
+        },
+        {
+          "name": "skin",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "rotation",
+          "type": "float"
+        },
+        {
+          "name": "weapon1",
+          "type": "int"
+        },
+        {
+          "name": "weapon1_ammo",
+          "type": "int"
+        },
+        {
+          "name": "weapon2",
+          "type": "int"
+        },
+        {
+          "name": "weapon2_ammo",
+          "type": "int"
+        },
+        {
+          "name": "weapon3",
+          "type": "int"
+        },
+        {
+          "name": "weapon3_ammo",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SpawnPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerPosFindZ",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float *"
+        },
+        {
+          "name": "y",
+          "type": "float *"
+        },
+        {
+          "name": "z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerFacingAngle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "angle",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerFacingAngle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "angle",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerInRangeOfPoint",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "range",
+          "type": "float"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerDistanceFromPoint",
+      "returnType": "float",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerStreamedIn",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "forplayerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerInterior",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "interiorid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerInterior",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerHealth",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "health",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerHealth",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "health",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerArmour",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "armour",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerArmour",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "armour",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerAmmo",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "weaponid",
+          "type": "int"
+        },
+        {
+          "name": "ammo",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerAmmo",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerWeaponState",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerTargetPlayer",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerTargetActor",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerTeam",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "teamid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerTeam",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerScore",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "score",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerScore",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerDrunkLevel",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerDrunkLevel",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "level",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerColor",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerColor",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerSkin",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "skinid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerSkin",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GivePlayerWeapon",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "weaponid",
+          "type": "int"
+        },
+        {
+          "name": "ammo",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "ResetPlayerWeapons",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerArmedWeapon",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "weaponid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerWeaponData",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "slot",
+          "type": "int"
+        },
+        {
+          "name": "weapon",
+          "type": "int *"
+        },
+        {
+          "name": "ammo",
+          "type": "int *"
+        }
+      ]
+    },
+    {
+      "name": "GivePlayerMoney",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "money",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "ResetPlayerMoney",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerName",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerMoney",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerState",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerIp",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "ip",
+          "type": "char *"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerPing",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerWeapon",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerKeys",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "keys",
+          "type": "int *"
+        },
+        {
+          "name": "updown",
+          "type": "int *"
+        },
+        {
+          "name": "leftright",
+          "type": "int *"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerName",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "type": "char *"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerTime",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "hour",
+          "type": "int"
+        },
+        {
+          "name": "minute",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerTime",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "hour",
+          "type": "int *"
+        },
+        {
+          "name": "minute",
+          "type": "int *"
+        }
+      ]
+    },
+    {
+      "name": "TogglePlayerClock",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "toggle",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerWeather",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "weather",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "ForceClassSelection",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerWantedLevel",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "level",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerWantedLevel",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerFightingStyle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "style",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerFightingStyle",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerVelocity",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerVelocity",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float *"
+        },
+        {
+          "name": "y",
+          "type": "float *"
+        },
+        {
+          "name": "z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "PlayCrimeReportForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "suspectid",
+          "type": "int"
+        },
+        {
+          "name": "crime",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayAudioStreamForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "url",
+          "type": "const char *"
+        },
+        {
+          "name": "posX",
+          "type": "float"
+        },
+        {
+          "name": "posY",
+          "type": "float"
+        },
+        {
+          "name": "posZ",
+          "type": "float"
+        },
+        {
+          "name": "distance",
+          "type": "float"
+        },
+        {
+          "name": "usepos",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "StopAudioStreamForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerShopName",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "shopname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerSkillLevel",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "skill",
+          "type": "int"
+        },
+        {
+          "name": "level",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerSurfingVehicleID",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerSurfingObjectID",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "RemoveBuildingForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "fX",
+          "type": "float"
+        },
+        {
+          "name": "fY",
+          "type": "float"
+        },
+        {
+          "name": "fZ",
+          "type": "float"
+        },
+        {
+          "name": "fRadius",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerLastShotVectors",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "fOriginX",
+          "type": "float *"
+        },
+        {
+          "name": "fOriginY",
+          "type": "float *"
+        },
+        {
+          "name": "fOriginZ",
+          "type": "float *"
+        },
+        {
+          "name": "fHitPosX",
+          "type": "float *"
+        },
+        {
+          "name": "fHitPosY",
+          "type": "float *"
+        },
+        {
+          "name": "fHitPosZ",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerAttachedObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "modelid",
+          "type": "int"
+        },
+        {
+          "name": "bone",
+          "type": "int"
+        },
+        {
+          "name": "fOffsetX",
+          "type": "float"
+        },
+        {
+          "name": "fOffsetY",
+          "type": "float"
+        },
+        {
+          "name": "fOffsetZ",
+          "type": "float"
+        },
+        {
+          "name": "fRotX",
+          "type": "float"
+        },
+        {
+          "name": "fRotY",
+          "type": "float"
+        },
+        {
+          "name": "fRotZ",
+          "type": "float"
+        },
+        {
+          "name": "fScaleX",
+          "type": "float"
+        },
+        {
+          "name": "fScaleY",
+          "type": "float"
+        },
+        {
+          "name": "fScaleZ",
+          "type": "float"
+        },
+        {
+          "name": "materialcolor1",
+          "type": "int"
+        },
+        {
+          "name": "materialcolor2",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "RemovePlayerAttachedObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerAttachedObjectSlotUsed",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "EditAttachedObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "CreatePlayerTextDraw",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "text",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawDestroy",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawLetterSize",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawTextSize",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawAlignment",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "alignment",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawColor",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawUseBox",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "use",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawBoxColor",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawSetShadow",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawSetOutline",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawBackgroundColor",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawFont",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "font",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawSetProportional",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "set",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawSetSelectable",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "set",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawShow",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawHide",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawSetString",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "string",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawSetPreviewModel",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "modelindex",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawSetPreviewRot",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "fRotX",
+          "type": "float"
+        },
+        {
+          "name": "fRotY",
+          "type": "float"
+        },
+        {
+          "name": "fRotZ",
+          "type": "float"
+        },
+        {
+          "name": "fZoom",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "PlayerTextDrawSetPreviewVehCol",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "int"
+        },
+        {
+          "name": "color1",
+          "type": "int"
+        },
+        {
+          "name": "color2",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPVarInt",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "varname",
+          "type": "const char *"
+        },
+        {
+          "name": "value",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPVarInt",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SetPVarString",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "varname",
+          "type": "const char *"
+        },
+        {
+          "name": "value",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetPVarString",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "varname",
+          "type": "const char *"
+        },
+        {
+          "name": "value",
+          "type": "char *"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPVarFloat",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "varname",
+          "type": "const char *"
+        },
+        {
+          "name": "value",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "GetPVarFloat",
+      "returnType": "float",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "DeletePVar",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "GetPVarsUpperIndex",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPVarNameAtIndex",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "varname",
+          "type": "char *"
+        },
+        {
+          "name": "size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPVarType",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "varname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerChatBubble",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "text",
+          "type": "const char *"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        },
+        {
+          "name": "drawdistance",
+          "type": "float"
+        },
+        {
+          "name": "expiretime",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PutPlayerInVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "vehicleid",
+          "type": "int"
+        },
+        {
+          "name": "seatid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerVehicleID",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerVehicleSeat",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "RemovePlayerFromVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "TogglePlayerControllable",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "toggle",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "PlayerPlaySound",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "soundid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "ApplyAnimation",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "animlib",
+          "type": "const char *"
+        },
+        {
+          "name": "animname",
+          "type": "const char *"
+        },
+        {
+          "name": "fDelta",
+          "type": "float"
+        },
+        {
+          "name": "loop",
+          "type": "bool"
+        },
+        {
+          "name": "lockx",
+          "type": "bool"
+        },
+        {
+          "name": "locky",
+          "type": "bool"
+        },
+        {
+          "name": "freeze",
+          "type": "bool"
+        },
+        {
+          "name": "time",
+          "type": "int"
+        },
+        {
+          "name": "forcesync",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "ClearAnimations",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "forcesync",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerAnimationIndex",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetAnimationName",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "animlib",
+          "type": "char *"
+        },
+        {
+          "name": "animlib_size",
+          "type": "int"
+        },
+        {
+          "name": "animname",
+          "type": "char *"
+        },
+        {
+          "name": "animname_size",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerSpecialAction",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerSpecialAction",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "actionid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "DisableRemoteVehicleCollisions",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "disable",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerCheckpoint",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "size",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "DisablePlayerCheckpoint",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerRaceCheckpoint",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "nextx",
+          "type": "float"
+        },
+        {
+          "name": "nexty",
+          "type": "float"
+        },
+        {
+          "name": "nextz",
+          "type": "float"
+        },
+        {
+          "name": "size",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "DisablePlayerRaceCheckpoint",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerWorldBounds",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x_max",
+          "type": "float"
+        },
+        {
+          "name": "x_min",
+          "type": "float"
+        },
+        {
+          "name": "y_max",
+          "type": "float"
+        },
+        {
+          "name": "y_min",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerMarkerForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "showplayerid",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "ShowPlayerNameTagForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "showplayerid",
+          "type": "int"
+        },
+        {
+          "name": "show",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerMapIcon",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "iconid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "markertype",
+          "type": "int"
+        },
+        {
+          "name": "color",
+          "type": "int"
+        },
+        {
+          "name": "style",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "RemovePlayerMapIcon",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "iconid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "AllowPlayerTeleport",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "allow",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerCameraPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerCameraLookAt",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float"
+        },
+        {
+          "name": "y",
+          "type": "float"
+        },
+        {
+          "name": "z",
+          "type": "float"
+        },
+        {
+          "name": "cut",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetCameraBehindPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerCameraPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float *"
+        },
+        {
+          "name": "y",
+          "type": "float *"
+        },
+        {
+          "name": "z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerCameraFrontVector",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "x",
+          "type": "float *"
+        },
+        {
+          "name": "y",
+          "type": "float *"
+        },
+        {
+          "name": "z",
+          "type": "float *"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerCameraMode",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "EnablePlayerCameraTarget",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "enable",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerCameraTargetObject",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerCameraTargetVehicle",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerCameraTargetPlayer",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerCameraTargetActor",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerCameraAspectRatio",
+      "returnType": "float",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerCameraZoom",
+      "returnType": "float",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "AttachCameraToObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "objectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "AttachCameraToPlayerObject",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "playerobjectid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "InterpolateCameraPos",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "FromX",
+          "type": "float"
+        },
+        {
+          "name": "FromY",
+          "type": "float"
+        },
+        {
+          "name": "FromZ",
+          "type": "float"
+        },
+        {
+          "name": "ToX",
+          "type": "float"
+        },
+        {
+          "name": "ToY",
+          "type": "float"
+        },
+        {
+          "name": "ToZ",
+          "type": "float"
+        },
+        {
+          "name": "time",
+          "type": "int"
+        },
+        {
+          "name": "cut",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "InterpolateCameraLookAt",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "FromX",
+          "type": "float"
+        },
+        {
+          "name": "FromY",
+          "type": "float"
+        },
+        {
+          "name": "FromZ",
+          "type": "float"
+        },
+        {
+          "name": "ToX",
+          "type": "float"
+        },
+        {
+          "name": "ToY",
+          "type": "float"
+        },
+        {
+          "name": "ToZ",
+          "type": "float"
+        },
+        {
+          "name": "time",
+          "type": "int"
+        },
+        {
+          "name": "cut",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerConnected",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerInVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "vehicleid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerInAnyVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerInCheckpoint",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "IsPlayerInRaceCheckpoint",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "SetPlayerVirtualWorld",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "worldid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "GetPlayerVirtualWorld",
+      "returnType": "int",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "EnableStuntBonusForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "enable",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "EnableStuntBonusForAll",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "enable",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "TogglePlayerSpectating",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "toggle",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "PlayerSpectatePlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "targetplayerid",
+          "type": "int"
+        },
+        {
+          "name": "mode",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "PlayerSpectateVehicle",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "targetvehicleid",
+          "type": "int"
+        },
+        {
+          "name": "mode",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "StartRecordingPlayerData",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "recordtype",
+          "type": "int"
+        },
+        {
+          "name": "recordname",
+          "type": "const char *"
+        }
+      ]
+    },
+    {
+      "name": "StopRecordingPlayerData",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "CreateExplosionForPlayer",
+      "returnType": "bool",
+      "args": [
+        {
+          "name": "playerid",
+          "type": "int"
+        },
+        {
+          "name": "X",
+          "type": "float"
+        },
+        {
+          "name": "Y",
+          "type": "float"
+        },
+        {
+          "name": "Z",
+          "type": "float"
+        },
+        {
+          "name": "type",
+          "type": "int"
+        },
+        {
+          "name": "Radius",
+          "type": "float"
+        }
+      ]
+    }
+  ]
+}
