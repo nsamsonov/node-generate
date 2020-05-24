@@ -17,7 +17,7 @@ const generateNativeWrappers = async (docsStore: DocsStore) => {
     "a_actor",
     "a_http",
     // "a_npc",
-    "a_objects", 
+    "a_objects",
     "a_players", 
     "a_sampdb",
     "a_vehicles",

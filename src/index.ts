@@ -1,4 +1,4 @@
-import { typeDefinitions, globals, handlebarsHelper, wrappers } from './generators';
+import { typeDefinitions, globals, handlebarsHelper, wrappers, julia } from './generators';
 import { DocsStore } from './docsStore';
 
 import ora from 'ora';
@@ -11,6 +11,7 @@ async function generateAll() {
   await typeDefinitions.generate(docsStore);
   await wrappers.generate(docsStore);
   await globals.generate();
+  await julia.generate();
 
   generating.succeed('All type definitions generated.');
 }

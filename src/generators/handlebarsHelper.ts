@@ -1,5 +1,5 @@
-import { IParam, IPawnDoc } from '../interfaces';
 import Handlebars from 'handlebars';
+import { IParam, IPawnDoc } from '../interfaces';
 
 export function initHandlerbars() {
   Handlebars.registerHelper({
@@ -12,8 +12,9 @@ export function initHandlerbars() {
     and: (v1, v2) => v1 && v2,
     or: (v1, v2) => v1 || v2,
   });
-    
+
   Handlebars.registerHelper({
+    filterNonEmpty: (array: any[], field?: string) => array.filter(a => (field ? a[field] : a) !== ""),
     // has variadic params
     hvp: (pa: Array<IParam>) => pa.some(p => p.isVariadic),
     // specifier values string
@@ -37,25 +38,40 @@ export function initHandlerbars() {
       return b ? `{${type}}` : type;
     },
     restriction: (param: IParam) => {
-        if (param.type === 'i' || param.type === 'd') {
-          return "Must be a whole number."
-        } else if (param.type === 'a') {
-          return "All numbers must be whole";
-        }
-        return null;
+      if (param.type === 'i' || param.type === 'd') {
+        return "Must be a whole number."
+      } else if (param.type === 'a') {
+        return "All numbers must be whole";
+      }
+      return null;
     },
     outputtype: (params: Array<IParam>) => {
       const types = params.filter(p => p.isReference).map(r => referenceToTsType(r.type));
       if (!types.length) {
         return "number";
-      } 
+      }
       if (types.length === 1) {
         return types[0];
       }
       return `[${types.join(", ")}]`;
     }
   });
+
+    
+  Handlebars.registerHelper( "join", function( array, sep, options ) {
+    return array.map(function( item: any ) {
+        return options.fn( item );
+    }).join( sep );
+  });
+
+  
+  Handlebars.registerHelper( "joinDefined", (array: any[], sep, options) => {
+    return array.map(item => options.fn( item ))
+      .filter(item => item != null && item !== "")
+      .join( sep );
+  });
 }
+
 
 function referenceToTsType(t: IParam['type']) {
   switch (t) {
@@ -66,7 +82,7 @@ function referenceToTsType(t: IParam['type']) {
     case 'F':
     case 'd':
     case 'D':
-    case 'i': 
+    case 'i':
     case 'I':
       return "number";
     case 'a':

@@ -4,8 +4,10 @@ export enum EPaths {
   TEMPLATE_GLOBALS = './src/templates/globals.d.ts.hjs',
   TEMPLATE_WRAPPERS = './src/templates/wrappers/wrappers.ts.hjs',
   TEMPLATE_WRAPPERS_INDEX = './src/templates/wrappers/index.ts.hjs',
+  TEMPLATE_JULIA = './src/templates/julia/natives.jl.hjs',
   GENERATED_EVENT_TYPES = './generated/types/events.d.ts',
   GENERATED_SAMP_TYPES = './generated/types/samp.d.ts',
   GENERATED_GLOBAL_TYPES = './generated/types/globals.d.ts',
   GENERATED_WRAPPERS_FOLDER = './generated/wrappers',
+  GENERATED_JULIA_NATIVES = './generated/julia/natives.jl',
 }
