@@ -128,7 +128,7 @@ function substituteSize(metadata: JuliaNativeMetadata) {
   metadata.variables.forEach((v, idx, array) => {
       if (v.kind === "reference" && v.trueType === "String") {
         const sizeVar = array[idx + 1];
-        if (!/(size)|(len)/.test(sizeVar.name) || sizeVar.kind !== "value" || sizeVar.argType !== "Int32") {
+        if (!/(size)|(len)/.test(sizeVar.name) || sizeVar.kind !== "value" || sizeVar.argType !== "Integer") {
           throw new Error(`Expected len for ${v.name} in ${metadata.name} but got ${sizeVar.name}`);
         }
         sizeVar.name = v.name + "_size";
@@ -234,32 +234,34 @@ function getArgMetadata(gdkArg: GdkArg): JuliaNativeMetadata["variables"][number
     case "int": return {
       kind: "value",
       name,
-      argType: "Int32",
+      argType: "Integer",
       ctype: "Cint",
       ccall: name,
     };
     case "float": return {
       kind: "value",
       name,
-      argType: "Float32",
+      argType: "Number",
       ctype: "Cfloat",
       ccall: name,
     };
     case "int *": return {
       kind: "reference",
       name,
-      init: `${name}::Int32 = 0`, 
+      init: `${name}_ref = Ref{Integer}(0)`, 
       ctype: "Ref{Cint}",
-      ccall: name,
-      trueType: "Int32",
+      ccall: name + "_ref",
+      cleanup: `${name} = ${name}_ref[]`,
+      trueType: "Integer",
     };
     case "float *": return {
       kind: "reference",
       name,
-      init: `${name}::Float32 = 0`,
+      init: `${name}_ref = Ref{Float32}(0)`,
       ctype: "Ref{Cfloat}",
-      ccall: name,
-      trueType: "Float32",
+      ccall: name + "_ref",
+      cleanup: `${name} = ${name}_ref[]`,
+      trueType: "Number",
     };
     case "char *": return {
       kind: "reference",
@@ -286,8 +288,8 @@ function getArgMetadata(gdkArg: GdkArg): JuliaNativeMetadata["variables"][number
 function gdkToJuliaArgType(gdkArgType: GdkArg["type"]) {
   switch (gdkArgType as GdkArgType) {
     case "bool": return "Bool";
-    case "int": return "Int32";
-    case "float": return "Float32";
+    case "int": return "Integer";
+    case "float": return "Number";
     case "const char *": return "String";
     case "char *":
     case "int *":
@@ -329,7 +331,7 @@ function isOutputType(gdkArgType: GdkArg["type"]) {
 }
 
 function prepopulatedStructs(): typeof juliaStructs {
-  const addTypes = (vars: string[]) => vars.map(v => ({ name: v, type: "Float32" }));
+  const addTypes = (vars: string[]) => vars.map(v => ({ name: v, type: "Number" }));
 
   const aliasMap: typeof juliaStructs = {};
 
@@ -355,6 +357,7 @@ function prepopulatedStructs(): typeof juliaStructs {
   }
 
   registerStructAlias(aliasMap, vector2, "position", addTypes(["x", "y"]));
+
   registerStructAlias(aliasMap, vector3, "position", addTypes(["x", "y", "z"]));
   registerStructAlias(aliasMap, vector3, "position", addTypes(["X", "Y", "Z"]));
   registerStructAlias(aliasMap, vector3, "position", addTypes(["fX", "fY", "fZ"]));
@@ -365,7 +368,9 @@ function prepopulatedStructs(): typeof juliaStructs {
   registerStructAlias(aliasMap, vector3, "rotation", addTypes(["rotX", "rotY", "rotZ"]));
   registerStructAlias(aliasMap, vector3, "fromPos", addTypes(["FromX", "FromY", "FromZ"]));
   registerStructAlias(aliasMap, vector3, "toPos", addTypes(["ToX", "ToY", "ToZ"]));
+
   registerStructAlias(aliasMap, vector4, "rotation", addTypes(["w", "x", "y", "z"]));
+
   registerStructAlias(aliasMap, shotVector, "shotVector", addTypes(["fOriginX", "fOriginY", "fOriginZ", "fHitPosX", "fHitPosY", "fHitPosZ"]));
 
   return aliasMap;
